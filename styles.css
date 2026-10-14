@@ -3,7 +3,7 @@ body {
   background-color: #f4f4f4;
   margin: 0;
   padding: 0;
-
+ background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRstVk1_LMDoRYrDxBgNbHqxDYLe0IOPhhuVtQuToSOnQ&s=10);
 }
 
 form {
@@ -15,7 +15,12 @@ form {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+h1{
+  text-align: center;
+  
+}
+
+h2,h3 {
   color: #333;
   text-align: center;
   margin-top: 20px;
@@ -27,12 +32,9 @@ section {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: darkolivegreen;
 }
   
-h2 {
-  color: #333;
-  margin-bottom: 10px;
-}
 
 label {
   display: block;
@@ -67,6 +69,7 @@ button {
   list-style-type: none;
   padding: 0;
 }
+
 
 footer {
   text-align: center;

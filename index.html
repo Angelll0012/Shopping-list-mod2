@@ -9,30 +9,31 @@
 </head>
 <body>
     <h1>Interactive Shopping list</h1>
-  <form id="shoppingform">
+ 
+    <form>
     <section>
         <h2>Add item</h2>
         <label for="itemName">Name:</label>
-        <input type="text" id="itemname" placeholder="Enter item" required>
+        <input type="text" id="itemname" placeholder="Enter item" required> 
 
-        <button id="addButton">Add items</button>
- </section>
+     <label>Price:</label>
+     <input  id="itemprice" type="number" placeholder="Price" required> 
 
-  <section>
+      <button id="addButton">Add items</button>  
+      
     <h3> Shopping items</h3>
-    <ul id="shoppinglist"></ul>
-
-     <label id="itemPrice">Price:</label>
-     <input type="number" placeholder="Price" required>
+    <ul id="shoppinglist"></ul>  
 
     <button id="markPurchased" >Mark Purchased</button>
 
   
 
-  </section>
+  
+   <h3 id="totalcost">Total cost: KSh 0.00</h3>
 
- <section>
   <button id="clearlist" >Clearlist</button>
+
+  
   </section>
   </form>
 
