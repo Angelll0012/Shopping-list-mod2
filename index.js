@@ -40,24 +40,24 @@ function displayItems() {
 
         // apply the purchased style when this item has been bought
         if (item.purchased) {
-            // the CSS can use this class to visually distinguish purchased items
+            // the css can use this class to visually distinguish purchased items
             listItem.classList.add("purchased");
         }
 
-        // create a span to show the item's name and price
+        // create a span to show the items name and price
         const itemDetails = document.createElement("span");
         // set the text safely and format the price to two decimal places
         itemDetails.textContent =
             `${item.name} - KSh ${item.price.toFixed(2)}`;
 
-        // create a button that toggles this item's purchased status
+        // create a button that toggles this items purchased status
         const purchaseButton = document.createElement("button");
         // show "Undo" for purchased items, otherwise offer to mark it purchased
         purchaseButton.textContent = item.purchased
             ? "Undo"
             : "Mark Purchased";
 
-        // respond when the user clicks this item's purchase button
+        // respond when the user clicks this items purchase button
         purchaseButton.addEventListener("click", function () {
             // flip the current purchased value between true and false
             item.purchased = !item.purchased;
@@ -67,7 +67,7 @@ function displayItems() {
             displayItems();
         });
 
-        // add the item's name and price to its row
+        // add the items name and price to its row
         listItem.appendChild(itemDetails);
         // add the purchase toggle button to its row
         listItem.appendChild(purchaseButton);
@@ -81,17 +81,17 @@ function displayItems() {
 
 // calculate and display the total cost of items that have not been purchased
 function updateTotalCost() {
-    // keep only items still to buy, then add together their prices
+    // keep only items still to buy then add together their prices
     const total = shoppinglist
         .filter(item => !item.purchased)
         .reduce((sum, item) => sum + item.price, 0);
 
-    // show the total in Kenyan shillings with two decimal places
+    // show the total in kenyan shillings with two decimal places
     totalCostElement.textContent =
         `Total cost: KSh ${total.toFixed(2)}`;
 }
 
-// add a new item when the user clicks the Add button
+// add a new item when the user clicks the add button
 addButton.addEventListener("click", function () {
     // trim whitespace from the name so a blank-spaces-only name is rejected
     const itemname = nameInput.value.trim();
@@ -111,13 +111,13 @@ addButton.addEventListener("click", function () {
         return;
     }
 
-    // add a new, not-yet-purchased item to the in-memory shopping list
+    // add a new, not-yet-purchased item to the in memory shopping list
     shoppinglist.push({
         // store the trimmed item name
         name: itemname,
         // store the numeric price
         price: price,
-        // new items begin in the not-purchased state
+        // new items begin in the not purchased state
         purchased: false
     });
 
