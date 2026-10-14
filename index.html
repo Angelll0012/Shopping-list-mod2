@@ -8,7 +8,37 @@
 
 </head>
 <body>
-    
+    <h1>Interactive Shopping list</h1>
+  <form id="shoppingform">
+    <section>
+        <h2>Add item</h2>
+        <label for="itemName">Name:</label>
+        <input type="text" id="itemname" placeholder="Enter item" required>
+
+        <button id="addButton">Add items</button>
+ </section>
+
+  <section>
+    <h3> Shopping items</h3>
+    <ul id="shoppinglist"></ul>
+
+     <label id="itemPrice">Price:</label>
+     <input type="number" placeholder="Price" required>
+
+    <button id="markPurchased" >Mark Purchased</button>
+
+  
+
+  </section>
+
+ <section>
+  <button id="clearlist" >Clearlist</button>
+  </section>
+  </form>
+
+  <footer>&copy;Shopping list.All rights resrved.</footer>
+
     <script src="index.js"></script>
 </body>
+
 </html>
